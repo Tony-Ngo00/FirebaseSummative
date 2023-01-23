@@ -6,7 +6,7 @@ const store = useStore();
 
 <template>
   <div class="cartBox" v-for="movie in Array.from(store.cart.values())">
-    <p>Movie Title: {{ movie.title }}</p>
+    <h1>Movie Title: {{ movie.title }}</h1>
     <img :src="`https://image.tmdb.org/t/p/w500${movie.poster}`"/>
     <button @click="store.removeFromCart(movie.id)">Remove</button>
   </div>
@@ -17,6 +17,9 @@ const store = useStore();
 :root {
     background-color:rgb(0, 0, 0);
   }
+h1 {
+  font-size: 30px;
+}
 .cartBox {
   background-color:rgba(53, 52, 52, 0.856);
   margin-bottom: 20px;
@@ -29,5 +32,13 @@ const store = useStore();
 img {
   width: 250px;
   height: 400px;
+}
+
+button {
+  font-size: 20px;
+  color: rgb(202, 26, 26);
+  background-color: rgb(54, 52, 52);
+  border-color: rgba(71, 70, 70, 0.76);
+  border-width: 3px;
 }
 </style>

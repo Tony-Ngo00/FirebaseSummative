@@ -35,6 +35,7 @@ let info = (
           </td>
         </table>
         <button class="buyButton" @click="store.addToCart(props.id, {
+          id: info.id,
           poster: info.poster_path,
           title: info.title
         })">Purchase</button>
@@ -79,7 +80,7 @@ let info = (
   background: rgba(0, 0, 0, 0);
   font-weight: bold;
   font-size: 2vw;
-  color: rgb(36, 12, 12);
+  color: rgb(202, 26, 26);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: bold;
 }
@@ -121,6 +122,6 @@ img {
 }
 
 .close-button {
-  left: 900px;
+  left: 920px;
 }
 </style>

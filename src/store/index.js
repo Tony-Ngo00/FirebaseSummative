@@ -45,18 +45,8 @@ export const useStore = defineStore("store", {
     addToCart(id, data) {
       this.cart.set(id, data);
     },
-    /* removeFromCart(id) {
-      console.log(this.cart);
-      this.cart.delete(id);
-      this.cart.forEach((element) => {
-        console.log(element);
-      })
-    }, */
     removeFromCart(id) {
-      const index = this.indexOf.cart(id);
-        if (index !== -1) {
-          this.cart.splice(index, 1);
-        };
-    },
+      this.cart.delete(id);
+    }
   },
 });
